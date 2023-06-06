@@ -1,0 +1,17 @@
+#Exclude Django-specific files
+*.pyc
+*.log
+*.pot
+__pycache__/
+media
+
+#Exclude database files
+*.sqlite3
+
+#Exclude IDE-specific files 
+.vscode/
+.idea/
+
+#Exclude virtual environment directories 
+venv/
+env/
