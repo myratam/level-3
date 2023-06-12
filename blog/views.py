@@ -2,22 +2,27 @@ from django.shortcuts import render
 from .models import Post
 from django.contrib.auth.decorators import login_required
 
-# Create your views here.
 @login_required(login_url='/login/')
 def blog_home(request):
+    posts = Post.objects.all()
+    return render(request, 'blog.html', {'posts': posts})
     """
-    The view function for the blog homepage.
+    Display the blog homepage.
 
-    This view displays a list of all blog posts.
+    This view function retrieves all blog posts and renders them on the blog homepage template.
     Only authenticated users can access this page.
 
     Parameters:
-    - request: HttpRequest object representing the current request.
+    - request (HttpRequest): The HTTP request object.
 
     Returns:
-    - HttpResponse object rendering the 'blog.html' template,
-      including the list of blog posts as context.
+    - HttpResponse: A response object rendering the 'blog.html' template, including the list
+      of blog posts as context.
 
+    Raises:
+    - AuthenticationError: If the user is not authenticated.
+
+    Note: This view function requires the user to be logged in.
     """
-    posts = Post.objects.all()
-    return render(request, 'blog.html', {'posts': posts})
+    
+
