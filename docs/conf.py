@@ -18,10 +18,10 @@ release = '00.00.01'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = []
+extensions = ['sphinx.ext.autodoc']
 
 templates_path = ['_templates']
-exclude_patterns = ['Thumbs.db', '.DS_Store']
+#exclude_patterns = ['Thumbs.db', '.DS_Store'] 
 
 # Set up Django
 sys.path.insert(0, os.path.abspath('..'))
