@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # My Capstone Django Application
 
 This is a Django application that showcases the power of Django framework in building web applications.
@@ -42,4 +43,6 @@ docker run -p 8000:8000 my-blog
 
 3. Access the application in your web browser at http://localhost:8000.
 
+
+=======
 
